@@ -97,7 +97,7 @@ function getData(){
         if (dataset[i][j].RecycleCompany.indexOf(select2.value) > -1) {
           var address = "https://www.google.com.tw/maps/place/"+dataset[i][j].RecycleSiteAddress;
           console.log(address);
-          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteName+'</td><td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
+          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].ServiceTime+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
           console.log('bingo');
         }
         else{
@@ -117,7 +117,7 @@ function getData(){
         if (dataset[i][j].RecycleCompany.indexOf(select2.value) > -1 && dataset[i][j].County == select1.value) {
           var address = "https://www.google.com.tw/maps/place/"+dataset[i][j].RecycleSiteAddress;
           console.log(address);
-          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteName+'</td><td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
+          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].ServiceTime+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
           console.log('bingo');
         }
         else{
