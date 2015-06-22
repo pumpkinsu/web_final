@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>離我最近</title>
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/map.css">
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+ 
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ 
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/jquery.tinyMap.js"></script>
+	<script type="text/javascript" src="js/jquery.tinyMap.min.js"></script>
+</head>
+
+<body onload="content.initialize()"> 
+	<div class="wrap">
+		<div class="logo">
+			<img src="img/LOGO.png" alt="" width="190px" height="190px" style="display:block; margin:auto;">
+		</div>
+		<div class="nav">
+			<ul align="middle">	
+				<a href="index.html"><li>首頁</li></a>
+				<a href="intro.html"><li>網站簡介</li></a>
+				<a href="team.html"><li>建置團隊</li></a>
+				<a href="search.html"><li>搜尋</li></a>
+				<a href="near.html"><li>離我最近</li></a>
+			</ul>
+		</div>
+	<!-- side panel div container --> 
+		<div id="map"> 
+			<h1>輸入目前位置
+				<!-- search box -->
+			<div id="input">
+				<input type="text" id="address">
+				<input type="button" value="find" onClick="content.geocode()">
+			</div>
+		</div> 
+			</h1>     
+		</div> 
+		<!-- map div container --> 
+		<div id="map_canvas" ></div> 
+	</div>	
+</body>  
+</html>
