@@ -1,5 +1,5 @@
 function getData(){
-  $('.TB_COLLAPSE').html("<caption>查詢結果</caption><thead><tr><th>公司</th><th>店家</th><th>地址</th><th>電話</th><th>地圖</th></tr></thead>");
+  $('.TB_COLLAPSE').html("<caption>查詢結果</caption><thead><tr><th>公司</th><th>地址</th><th>營業時間</th><th>電話</th><th>地圖</th></tr></thead>");
   $('.loading_area').append("<img src='img/loading.gif'  style='width:350px;height:350px;'>");
   
   //style="display:block; margin:auto;"
@@ -57,7 +57,7 @@ function getData(){
   //console.log(dataset[0][7]);
 
   function clearBox(elementID){
-    $('.TB_COLLAPSE').html("<caption>查詢結果</caption><thead><tr><th>公司</th><th>店家</th><th>地址</th><th>電話</th><th>地圖</th></tr></thead>");
+    $('.TB_COLLAPSE').html("<caption>查詢結果</caption><thead><tr><th>公司</th><th>地址</th><th>營業時間</th><th>電話</th><th>地圖</th></tr></thead>");
 	 $('.loading_area').html("");
   }
   clearBox();
@@ -76,7 +76,7 @@ function getData(){
         if (dataset[i][j].County == select1.value) {
           var address = "https://www.google.com.tw/maps/place/"+dataset[i][j].RecycleSiteAddress;
           console.log(address);
-          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteName+'</td><td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
+          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].ServiceTime+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
           console.log('bingo');
         }
         else{
@@ -97,7 +97,7 @@ function getData(){
         if (dataset[i][j].RecycleCompany.indexOf(select2.value) > -1) {
           var address = "https://www.google.com.tw/maps/place/"+dataset[i][j].RecycleSiteAddress;
           console.log(address);
-          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteName+'</td><td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
+          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].ServiceTime+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
           console.log('bingo');
         }
         else{
@@ -117,7 +117,7 @@ function getData(){
         if (dataset[i][j].RecycleCompany.indexOf(select2.value) > -1 && dataset[i][j].County == select1.value) {
           var address = "https://www.google.com.tw/maps/place/"+dataset[i][j].RecycleSiteAddress;
           console.log(address);
-          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteName+'</td><td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
+          $('.TB_COLLAPSE').append('<tr><td>'+dataset[i][j].RecycleCompany+'<td>'+dataset[i][j].RecycleSiteAddress+'</td><td>'+dataset[i][j].ServiceTime+'</td><td>'+dataset[i][j].RecycleSiteTel+'</td><td>'+'<a href = '+address+'>'+'<img src="img/map.png" /></a>'+'</td></tr>');
           console.log('bingo');
         }
         else{

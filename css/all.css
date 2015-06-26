@@ -57,11 +57,18 @@ body{
 
 }
 
-.logo{
+h1{
 	width: auto;
 	height: 200px;
 }
-
+.message p{
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-family: 微軟正黑體;
+	color: #008844;
+	margin-bottom: 15px;
+}
 
 .nav{
 	width: 1000px;
@@ -104,30 +111,35 @@ a{
 
 }
 .content .team img{
-	width:350px; 
-	height:500px;
-	padding-top:50px; 
-	padding-bottom:50px;
-	padding-right: 40px;
-	padding-left: 60px;
-	float: left;
+	width:200px; 
+	height:280px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 140px;
+	padding: 10px;
 
+	float: left;
+	border-radius: 50%;
+    border:5px solid #fff;
 }
 .content .why img{
 	display:block; 
 	margin:auto;
 	margin-bottom: 20px;
-	margin-top: 40px;
+	padding-top: 30px;
 
 }
 
 .content p{
 	font-size: 18px;
 	font-family: 微軟正黑體;
+	line-height: 26px;
+	margin-top: 5px;
 }
 
 .result .TB_COLLAPSE {
 	font-family: 微軟正黑體;
+	margin-top: 10px;
 }
 
 .intro{
@@ -135,6 +147,7 @@ a{
 	margin:auto;
 	text-align: center;
 	margin-bottom: 30px;
+	line-height: 26px;
 }
 .bottom{
 
@@ -171,12 +184,24 @@ p{
 .teamContent{
 	text-align: center;
 	padding-bottom: 50px;
+	line-height: 30px;
 }
 .data span{
 	color: #003C9D;
+	
+}
+
+.data {
+	margin-bottom: 10px;
 }
 
 #map_canvas{
 	height:100%; 
 	margin-left:400px;
+}
+.footer p{
+	text-align: center;
+	font-size: 10px;
+	line-height: 14px;
+	margin-bottom: 10px;
 }

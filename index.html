@@ -1,37 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>PhoneRecycle</title>
+	<meta charset="UTF-8">
+	<title>搜尋</title>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/chart.js"></script>
+	<script type="text/javascript" src="js/d3.js"></script>
+	<script type="text/javascript" src="js/d3.min.js"></script>
 	<script type="text/javascript" src="js/json_total.js"></script>
 	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/table.css">
 </head>
-<body >
+
+<body>
 	<div class="wrap">
-		<div class="logo">
-			<img src="img/LOGO.png" alt="" width="190px" height="190px" style="display:block; margin:auto;">
+		<h1>
+			<a href="index.html"><img src="img/LOGO.png" alt="" width="190px" height="190px" style="display:block; margin:auto;"></a>
+		</h1>
+		<div class="message">
+			<p>PhoneRecycle，一個讓您方便、快速查詢手機回收點的平台</p>
 		</div>
+		<div class="data">
+			
+			</div>
 		<div class="nav">
 			<ul align="middle">	
-				<a href="index.html"><li>首頁</li></a>
-				<a href="intro.html"><li>網站簡介</li></a>
-				<a href="team.html"><li>建置團隊</li></a>
-				<a href="search.html"><li>搜尋</li></a>
+				<li><a href="index.html">首頁</a></li>
+				<li><a href="intro.html">網站簡介</a></li>
+				<li><a href="team.html">建置團隊</a></li>
 			</ul>
 		</div>
 		<div class="content">
-			<div class="enter">
-				<img src="img/1.jpg" alt="" >
+			<p>請選擇欲查詢地區</p>
+			<select id="selectCounty"  onchange="getData()">
+				<option value="null" selected>未選擇地點</option>
+				<option value="台北市">台北市</option>
+				<option value="新北市">新北市</option>
+				<option value="基隆市">基隆市</option>
+				<option value="桃園市">桃園市</option>
+				<option value="桃園縣">桃園縣</option>
+				<option value="新竹市">新竹市</option>
+				<option value="新竹縣">新竹縣</option>
+				<option value="宜蘭">宜蘭縣</option>
+				<option value="苗栗">苗栗縣</option>
+				<option value="台中市">台中市</option>
+				<option value="彰化">彰化縣</option>
+				<option value="南投">南投縣</option>
+				<option value="雲林">雲林縣</option>
+				<option value="嘉義市">嘉義市</option>
+				<option value="台南市">台南市</option>
+				<option value="高雄市">高雄市</option>
+				<option value="屏東">屏東縣</option>
+				<option value="花蓮">花蓮縣</option>
+				<option value="台東">台東縣</option>
+				<option value="澎湖縣">澎湖縣</option>
+				<option value="金門縣">金門縣</option>
+				<option value="連江縣">連江縣</option>
+				
+			</select>
+			<select id="selectCompany"  onchange="getData()">
+				<option value="null" selected>未選擇公司</option>
+				<option value="燦坤">燦坤</option>
+				<option value="愛買">愛買</option>
+				<option value="大眾">大眾電信</option>
+				<option value="亞太">亞太電信</option>
+				<option value="LG">LG</option>
+				<option value="中華">中華電信</option>
+				<option value="遠傳">遠傳電信</option>
+				<option value="全虹">全虹通信</option>
+				<option value="震旦">震旦通信</option>
+				<option value="聯強">聯強</option>
+				<option value="台灣大哥大">台灣大哥大</option>
+				<option value="拓勤">拓勤</option>
+				<option value="HTC">HTC</option>
+				<option value="諾基亞">諾基亞NOKIA</option>
+				<option value="SONY">SONY</option>
+				<option value="宏碁">宏碁Acer</option>
+				<option value="台灣之星">台灣之星</option>
+				<option value="Samsung">Samsung</option>
+				<option value="APPLE">APPLE</option>
+				<option value="神腦">神腦</option>
+				
+			</select>
+
+			<div class="result">
+			<table class="TB_COLLAPSE" >
+			  <caption>查詢結果</caption>
+			  <thead>
+				<tr><th>公司</th><th>地址</th><th>營業時間</th><th>電話</th><th>地圖</th></tr>
+			  </thead>		  
+			</table>
 			</div>
-			
-			<div class="data">
-			
+			<div class="loading_area"></div>
+			<div class="chart">
+				
+			</div>
+			<div class="intro">
+				<p>►各公司回收點之數量統計圖表◄</p>
 			</div>
 		</div>
-		<div class="bottom">
-			<p>    </p>
-		</div>
+			
+		<div class="footer">
+		<p>Copyright © 2015 國立高雄大學資管系 All Rights Reserved.</p>
+		</div>	
 	</div>
 </body>
 </html>
